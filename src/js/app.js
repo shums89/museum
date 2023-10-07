@@ -28,7 +28,7 @@ flsFunctions.isWebp();
 // flsFunctions.addLoadedClass();
 
 /* Модуль для работы с меню (Бургер) */
-// flsFunctions.menuInit();
+flsFunctions.menuInit();
 
 /* Учет плавающей панели на мобильных устройствах при 100vh */
 // flsFunctions.fullVHfix();
