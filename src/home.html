@@ -8,6 +8,36 @@
   <div class="wrapper">
     @@include('html/_header.htm',{})
     <main class="page">
+      <section class="page__welcome welcome">
+        <div class="welcome__container">
+          <div class="welcome__content">
+            <h1 class="welcome__title section-title">Welcome<br>to the Louvre</h1>
+            <span class="welcome__subtitle">From the castle to the museum</span>
+            <a class="welcome__button button button_red" href="https://www.google.com/maps/@48.8618159,2.3366818,3a,75y,81.55h,73.4t/data=!3m7!1e1!3m5!1sAF1QipOVxZQuSy3Bx9T_HpH_7FtBHDTXvI6SF-A10ocT!2e10!3e12!7i5472!8i2736">Discover the Louvre</a>
+          </div>
+          <div class="welcome__slider welcome-slider">
+            <div class="welcome-slider__slider">
+              <div class="welcome-slider__swiper">
+                <div class="welcome-slider__slide"><img src="@img/welcome/1.jpg" alt="Slide 1"></div>
+                <div class="welcome-slider__slide"><img src="@img/welcome/2.jpg" alt="Slide 2"></div>
+                <div class="welcome-slider__slide"><img src="@img/welcome/3.jpg" alt="Slide 3"></div>
+                <div class="welcome-slider__slide"><img src="@img/welcome/4.jpg" alt="Slide 4"></div>
+                <div class="welcome-slider__slide"><img src="@img/welcome/5.jpg" alt="Slide 5"></div>
+              </div>
+              <div class="welcome-slider__controll welcome-slider-controll">
+                <div class="welcome-slider-controll__fraction fraction-controll">
+                  <span class="fraction-controll__current">01</span> | <span class="fraction-controll__all">00</span>
+                </div>
+                <div class="welcome-slider-controll__pagination"></div>
+                <div class="welcome-slider-controll__buttons buttons-control">
+                  <div class="buttons-control__prev"></div>
+                  <div class="buttons-control__next"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
     @@include('html/_footer.htm',{})
   </div>

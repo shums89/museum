@@ -116,7 +116,7 @@ import * as flsForms from "./files/forms/forms.js";
 Документация: https://swiperjs.com/
 Сниппет(HTML): swiper
 */
-// import "./files/sliders.js";
+import "./files/sliders.js";
 
 //====================================================================
 // Модули работы с прокруткой страницы 

@@ -1,1 +1,33 @@
 // Заголовки, общие БЄМ блоки и проче...
+
+.section-title {
+  color: $secondaryColor;
+  font-family: 'Forum';
+  font-size: rem(80);
+  font-weight: 400;
+  line-height: rem(90);
+  letter-spacing: rem(5);
+  text-transform: uppercase;
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  font-family: 'Roboto';
+  font-size: rem(22);
+  font-weight: 300;
+  line-height: normal;
+  letter-spacing: rem(2);
+  transition: all 0.3s ease 0s;
+  // .button_red
+  &_red {
+    color: #fff;
+    border-radius: rem(10);
+    background-color: $darkRed;
+  }
+  &:hover {
+    background-color: $fontGold;
+  }
+}

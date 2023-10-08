@@ -148,3 +148,10 @@ body {
 
 // Подключение стилей отдельных страниц
 @import 'home';
+
+.page {
+  // .page__welcome
+  &__welcome {
+    margin-bottom: rem(75);
+  }
+}
