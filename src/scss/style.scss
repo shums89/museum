@@ -59,6 +59,10 @@ $responsiveType: 1;
 // Обнуление и общие параметры
 @import 'base/null';
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   // Скролл заблокирован
   .lock & {
