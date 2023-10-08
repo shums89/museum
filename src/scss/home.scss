@@ -161,3 +161,32 @@
     }
   }
 }
+
+//====================================================================
+
+.visiting {
+  // .visiting__container
+  &__container {
+  }
+  // .visiting__title
+  &__title {
+    position: relative;
+    margin-bottom: rem(75);
+    padding: rem(25);
+  }
+  // .visiting__list
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: rem(75) rem(60);
+  }
+  // .visiting__item
+  &__item {
+  }
+}
+.section-title {
+  // .section-title_gold
+  &_gold {
+  }
+}

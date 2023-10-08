@@ -61,3 +61,17 @@ window.addEventListener("DOMContentLoaded", function () {
     input.addEventListener("keydown", mask, false)
   });
 });
+
+//====================================================================
+
+const visitingCardLinks = document.querySelectorAll('.visiting-card__link');
+
+visitingCardLinks.forEach(link => {
+  link.addEventListener('click', () => {
+    const museum = {
+      title: link.closest('.visiting-card__link').dataset.title,
+      frameSrc: link.closest('.visiting-card__link').dataset.frameSrc,
+    };
+    localStorage.setItem('museum', JSON.stringify(museum));
+  });
+});

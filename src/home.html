@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 @@include('html/_head.htm',{
-"title":"Главная"
+"title": "Главная"
 })
 
 <body>
@@ -13,7 +13,7 @@
           <div class="welcome__content">
             <h1 class="welcome__title section-title">Welcome<br>to the Louvre</h1>
             <span class="welcome__subtitle">From the castle to the museum</span>
-            <a class="welcome__button button button_red" href="https://www.google.com/maps/@48.8618159,2.3366818,3a,75y,81.55h,73.4t/data=!3m7!1e1!3m5!1sAF1QipOVxZQuSy3Bx9T_HpH_7FtBHDTXvI6SF-A10ocT!2e10!3e12!7i5472!8i2736">Discover the Louvre</a>
+            <a class="welcome__button button button_red" href="https://www.google.com/maps/@48.8618159,2.3366818,3a,75y,81.55h,73.4t/data=!3m7!1e1!3m5!1sAF1QipOVxZQuSy3Bx9T_HpH_7FtBHDTXvI6SF-A10ocT!2e10!3e12!7i5472!8i2736" target="_blank">Discover the Louvre</a>
           </div>
           <div class="welcome__slider welcome-slider">
             <div class="welcome-slider__slider">
@@ -36,6 +36,55 @@
               </div>
             </div>
           </div>
+        </div>
+      </section>
+      <section class="page__visiting visiting" id="visiting">
+        <div class="visiting__container">
+          <h2 class="visiting__title section-title section-title_gold underline-title">Virtual tour</h2>
+          <ul class="visiting__list">
+            <li class="visiting__item">
+              @@include('html/_visiting.htm',{
+              "title": "Royal Palace",
+              "image": "royal-palace.jpg",
+              "frameSrc": "https://www.google.com/maps/embed?pb=!4v1696762171939!6m8!1m7!1sCAoSLEFGMVFpcE1aOVlnbkFyYndFSWJUREFOZVNRWUZ1OWdOcXBXXzJTdjhGQnZZ!2m2!1d48.8606881835717!2d2.335679134426641!3f328.36!4f-2.450000000000003!5f0.4000000000000002"
+              })
+            </li>
+            <li class="visiting__item">
+              @@include('html/_visiting.htm',{
+              "title": "Denon Wing",
+              "image": "denon-wing.jpg",
+              "frameSrc": "https://www.google.com/maps/embed?pb=!4v1696772548464!6m8!1m7!1sCAoSLEFGMVFpcE5Sal9Dd1A0Y29ETVlkQ0hqNnFIZUJlSnBJMlZ4VTVCVXNPWDRG!2m2!1d48.8563254!2d2.3352706!3f0!4f0!5f0.7820865974627469"
+              })
+            </li>
+            <li class="visiting__item">
+              @@include('html/_visiting.htm',{
+              "title": "Colonnade Perrault",
+              "image": "colonnade-perrault.jpg",
+              "frameSrc": "https://www.google.com/maps/embed?pb=!4v1696772607922!6m8!1m7!1sCAoSLEFGMVFpcE5NWkdRdUVBLXBBVXZJR19lUF8yZjNnV1RLWkVKNlhMVkotUGdi!2m2!1d48.8601723!2d2.3395439!3f322.04!4f-5.75!5f0.440292882915489"
+              })
+            </li>
+            <li class="visiting__item">
+              @@include('html/_visiting.htm',{
+              "title": "Greek hall",
+              "image": "greek-hall.jpg",
+              "frameSrc": "https://www.google.com/maps/embed?pb=!4v1696772641889!6m8!1m7!1sCAoSLEFGMVFpcFA3dUZablRJVFJlLTdBRVZBZ0hBZnFpQ0wtMDNndkJIY1lXZ0Yz!2m2!1d48.86018303140322!2d2.335615591987402!3f177.69!4f5.609999999999999!5f0.4000000000000002"
+              })
+            </li>
+            <li class="visiting__item">
+              @@include('html/_visiting.htm',{
+              "title": "Mona Lisa",
+              "image": "mona-lisa.jpg",
+              "frameSrc": "https://www.google.com/maps/embed?pb=!4v1696772665785!6m8!1m7!1sCAoSLEFGMVFpcE8xd2tVVWJ5enBQamotT1IwbVI1ZXRaSlQteGwtNDBYSzhyRFEz!2m2!1d48.85987877384653!2d2.335515730085149!3f7.53!4f4!5f0.5970117501821992"
+              })
+            </li>
+            <li class="visiting__item">
+              @@include('html/_visiting.htm',{
+              "title": "Night Palace",
+              "image": "night-palace.jpg",
+              "frameSrc": "https://www.google.com/maps/embed?pb=!4v1696772688842!6m8!1m7!1sCAoSLEFGMVFpcFBwR0Fvd1lhdFZ5azNNTUduWkFhUWtZbTJFVWstRGxjYTA2U1M1!2m2!1d48.8563254!2d2.3352706!3f21.26!4f-10.090000000000003!5f0.4000000000000002"
+              })
+            </li>
+          </ul>
         </div>
       </section>
     </main>
