@@ -78,11 +78,10 @@
     justify-content: space-between;
     align-items: center;
     align-content: center;
-    gap: 55px;
+    gap: 45px;
     color: $secondaryColor;
-    font-family: Roboto;
+    font-family: 'Roboto';
     font-size: 22px;
-    font-style: normal;
     font-weight: 100;
     line-height: normal;
     letter-spacing: 2px;
@@ -92,6 +91,13 @@
   }
   // .menu__link
   &__link {
+    padding: 5px;
+    &:hover {
+      color: $fontGold;
+    }
+    &:active {
+      color: $fontGoldDark;
+    }
   }
   // .menu__icon
   &__icon {
