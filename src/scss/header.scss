@@ -58,8 +58,8 @@
     justify-content: space-between;
     align-items: center;
     align-content: center;
-    gap: 30px;
-    min-height: 150px;
+    gap: rem(30);
+    min-height: rem(150);
   }
   // .header__logo
   &__logo {
@@ -78,20 +78,20 @@
     justify-content: space-between;
     align-items: center;
     align-content: center;
-    gap: 45px;
+    gap: rem(45);
     color: $secondaryColor;
     font-family: 'Roboto';
-    font-size: 22px;
+    font-size: rem(22);
     font-weight: 100;
     line-height: normal;
-    letter-spacing: 2px;
+    letter-spacing: rem(2);
   }
   // .menu__item
   &__item {
   }
   // .menu__link
   &__link {
-    padding: 5px;
+    padding: rem(5);
     &:hover {
       color: $fontGold;
     }
