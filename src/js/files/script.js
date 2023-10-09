@@ -75,3 +75,53 @@ visitingCardLinks.forEach(link => {
     localStorage.setItem('museum', JSON.stringify(museum));
   });
 });
+
+//====================================================================
+
+const WITH_TABLET = 768;
+
+const compare = document.querySelector(".compare");
+const compareItems = compare.querySelectorAll(".compare__item");
+const compareItemBefore = compare.querySelector(".compare__item_before");
+const compareItemAfter = compare.querySelector(".compare__item_after");
+const scaleToggle = compare.querySelector(".compare__scale-toggle");
+
+window.addEventListener(`resize`, main);
+scaleToggle.addEventListener('input', () => {
+  compareItems.forEach(compareItem => {
+    // compareItem.style.transitionDuration = '0s';
+  });
+
+  draw();
+});
+
+function draw() {
+  let value = scaleToggle.value;
+
+  if (document.body.clientWidth < WITH_TABLET) {
+    compareItemBefore.style.width = '';
+    compareItemAfter.style.width = '';
+    compareItemAfter.style.marginLeft = '';
+  } else {
+    compareItemBefore.style.width = `${value}%`;
+
+    compareItemAfter.style.width = `${100 - value}%`;
+    compareItemAfter.style.marginLeft = `${value}%`;
+  }
+}
+
+function main() {
+  compare.classList.remove('compare--nojs');
+
+  if (document.body.clientWidth < WITH_TABLET) {
+    scaleToggle.value = 1;
+    scaleToggle.max = 2;
+  } else {
+    scaleToggle.value = 50;
+    scaleToggle.max = 100;
+  }
+
+  draw();
+}
+
+main();

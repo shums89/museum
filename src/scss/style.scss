@@ -155,11 +155,11 @@ body {
 
 .page {
   // .page__welcome
-  &__welcome {
-    margin-bottom: rem(75);
-  }
   // .page__visiting
-  &__visiting {
+  // .page__explore
+  &__welcome,
+  &__visiting,
+  &__explore {
     margin-bottom: rem(75);
   }
 }
