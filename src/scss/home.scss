@@ -596,3 +596,44 @@
     transform: translate(-50%, -50%) rotate(-180deg);
   }
 }
+
+//====================================================================
+
+.gallery {
+  padding-top: rem(75);
+  background-color: $bgDark;
+  // .gallery__container
+  &__container {
+  }
+  // .gallery__title
+  &__title {
+    margin-bottom: rem(75);
+  }
+  // .gallery__picture-wrapper
+  &__picture-wrapper {
+    position: relative;
+    height: rem(1960);
+    overflow: hidden;
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: rem(360);
+      background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000 100%);
+    }
+  }
+  // .gallery__picture-inner-wrapper
+  &__picture-inner-wrapper {
+    column-count: 3;
+    column-gap: rem(36);
+
+    & img {
+      display: block;
+      width: rem(456);
+      height: auto;
+      margin-bottom: rem(24);
+    }
+  }
+}
