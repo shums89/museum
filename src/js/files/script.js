@@ -268,3 +268,23 @@ videoVolumeScale.addEventListener('input', changeVolume);
 
 getPlayerActive();
 changeVolume();
+
+//====================================================================
+
+const pictureInnerContainer = document.querySelector('.gallery__picture-inner-wrapper');
+
+const shuffle = (array) => {
+  for (let i = array.length - 1; i > 0; i--) {
+    let j = Math.floor(Math.random() * (i + 1));
+    [array[i], array[j]] = [array[j], array[i]];
+  }
+  return array;
+};
+
+shuffle(Array(15).fill().map((e, i) => i + 1))
+  .map((e, i) => {
+    const img = document.createElement('img');
+    img.src = `img/galery/galery${e}.jpg`;
+    img.alt = `galery image ${i}`;
+    pictureInnerContainer.append(img);
+  });
