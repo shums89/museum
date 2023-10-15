@@ -643,6 +643,7 @@
 .tickets {
   // .tickets__container
   &__container {
+    margin-bottom: rem(75);
   }
   // .tickets__title
   &__title {
@@ -661,6 +662,14 @@
   }
   // .tickets__form
   &__form {
+  }
+  // .tickets__parallax
+  &__parallax {
+    width: 100%;
+    height: rem(400);
+    background: url('@img/parallax.jpg') 0 0 no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
   }
 }
 .tickets-form {
