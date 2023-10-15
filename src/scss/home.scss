@@ -637,3 +637,229 @@
     }
   }
 }
+
+//====================================================================
+
+.tickets {
+  // .tickets__container
+  &__container {
+  }
+  // .tickets__title
+  &__title {
+    margin-top: rem(75);
+    margin-bottom: rem(75);
+  }
+  // .tickets__content
+  &__content {
+    display: flex;
+    column-gap: rem(60);
+  }
+  // .tickets__img
+  &__img {
+    width: rem(720);
+    height: rem(550);
+  }
+  // .tickets__form
+  &__form {
+  }
+}
+.tickets-form {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  // .tickets-form__type
+  &__type {
+    display: flex;
+    flex-direction: column;
+    & legend {
+      color: $mainColor;
+      font-family: 'Roboto';
+      font-size: rem(28);
+      font-weight: 700;
+      line-height: normal;
+      margin-bottom: rem(50);
+    }
+    & input {
+      display: none;
+    }
+    & label {
+      position: relative;
+      padding-left: rem(40);
+      color: $mainColor;
+      font-family: 'Roboto';
+      font-size: rem(22);
+      font-weight: 300;
+      line-height: normal;
+      &:not(:last-child) {
+        margin-bottom: rem(25);
+      }
+      &:before,
+      &:after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        border-radius: 50%;
+      }
+      &:before {
+        width: rem(18);
+        height: rem(18);
+        left: 0;
+        transform: translateY(-50%);
+        border: rem(2) solid #000;
+      }
+      &:after {
+        width: rem(7);
+        height: rem(7);
+        left: rem(9);
+        background-color: #000;
+        transform: translate(-50%, -50%);
+        opacity: 0;
+      }
+    }
+    & input:checked + label:after {
+      transition: all 0.3s ease 0s;
+      opacity: 1;
+    }
+  }
+  // .tickets-form__column-buy
+  &__column-buy {
+  }
+  // .tickets-form__amout
+  &__amout {
+  }
+  // .tickets-form__btn
+  &__btn {
+    width: rem(175);
+    height: rem(50);
+    color: #fff;
+    background-color: #000;
+    border-radius: 2px;
+    &:hover {
+      color: #000;
+      background-color: #9d8665;
+    }
+  }
+}
+.tickets-form-amout {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  margin-bottom: rem(60);
+  & legend {
+    margin-bottom: rem(25);
+    color: $mainColor;
+    font-family: 'Roboto';
+    font-size: rem(28);
+    font-weight: 700;
+    line-height: normal;
+    text-align: right;
+  }
+  & label {
+    color: $mainColor;
+    font-family: 'Roboto';
+    font-size: rem(22);
+    font-weight: 300;
+    line-height: normal;
+    &:not(:last-of-type) {
+      margin-bottom: rem(10);
+    }
+    &:last-of-type {
+      margin-bottom: rem(50);
+    }
+  }
+  // .tickets-form-amout__basic
+  &__basic {
+  }
+  // .tickets-form-amout__senior
+  &__senior {
+  }
+  // .tickets-form-amout__total
+  &__total {
+  }
+  & p {
+    color: $mainColor;
+    font-family: 'Roboto';
+    font-size: rem(28);
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: rem(1.65);
+  }
+  & .quantity {
+    width: rem(150);
+    height: rem(50);
+    margin-top: rem(15);
+    display: flex;
+    border: rem(3) solid #000;
+    // .quantity__button
+    &__button {
+      flex: 0 0 rem(46);
+      position: relative;
+      cursor: pointer;
+      &:disabled {
+        cursor: default;
+      }
+      &:before,
+      &:after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: rem(16);
+        height: rem(3);
+        transition: all 0.3s ease 0s;
+        margin: 0px 0px 0px -8px;
+        background-color: #000;
+      }
+      &:disabled {
+        &:before,
+        &:after {
+          background-color: #999;
+        }
+      }
+      // .quantity__button_plus
+      &_plus {
+        &:after {
+          transform: rotate(-90deg);
+        }
+      }
+    }
+    // .quantity__input
+    &__input {
+      flex: 1 1 auto;
+      input {
+        height: 100%;
+        width: 100%;
+        color: #000;
+        text-align: center;
+        font-family: 'Roboto';
+        font-size: rem(22);
+        font-weight: 300;
+        line-height: normal;
+      }
+    }
+  }
+}
+.tickets-amout-basic {
+  // .tickets-amout-basic__quantity
+  &__quantity {
+  }
+}
+.quantity {
+  // .quantity__button
+  &__button {
+    // .quantity__button_minus
+    &_minus {
+    }
+    // .quantity__button_plus
+    &_plus {
+    }
+  }
+  // .quantity__input
+  &__input {
+  }
+}
+.tickets-amout-senior {
+  // .tickets-amout-senior__quantity
+  &__quantity {
+  }
+}

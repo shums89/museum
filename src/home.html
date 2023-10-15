@@ -181,6 +181,52 @@
           </div>
         </div>
       </section>
+      <section class="page__tickets tickets" id="tickets">
+        <div class="tickets__container">
+          <h2 class="tickets__title section-title section-title_gold underline-title">Buy tickets</h2>
+          <div class="tickets__content">
+            <img class="tickets__img" src="@img/tickets/tickets.jpeg" alt="Image tickets">
+            <form class="tickets__form tickets-form" action="" method="post">
+              <fieldset class="tickets-form__type">
+                <legend>Ticket Type</legend>
+                <input type="radio" name="tickets-type" value="permanent" id="permanent" checked>
+                <label for="permanent">Permanent exhibition</label>
+                <input type="radio" name="tickets-type" value="temporary" id="temporary">
+                <label for="temporary">Temporary exhibition</label>
+                <input type="radio" name="tickets-type" value="combined" id="combined">
+                <label for="combined">Combined Admission</label>
+              </fieldset>
+              <div class="tickets-form__column-buy">
+                <fieldset class="tickets-form__amout tickets-form-amout">
+                  <legend>Amount</legend>
+                  <label class="tickets-form-amout__basic tickets-amout-basic">
+                    Basic 18+
+                    <div class="tickets-amout-basic__quantity quantity">
+                      <button class="quantity__button quantity__button_minus" type="button"></button>
+                      <div class="quantity__input">
+                        <input autocomplete="off" type="number" name="form[]" min="0" value="1">
+                      </div>
+                      <button class="quantity__button quantity__button_plus" type="button"></button>
+                    </div>
+                  </label>
+                  <label class="tickets-form-amout__senior tickets-amout-senior">
+                    Senior 65+
+                    <div class="tickets-amout-senior__quantity quantity">
+                      <button class="quantity__button quantity__button_minus" type="button" disabled></button>
+                      <div class="quantity__input">
+                        <input autocomplete="off" type="number" name="form[]" min="0" value="0">
+                      </div>
+                      <button class="quantity__button quantity__button_plus" type="button"></button>
+                    </div>
+                  </label>
+                  <p>Total €<span class="tickets-form-amout__total">220</span></p>
+                </fieldset>
+                <button class="tickets-form__btn button" type="submit">Buy Now</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
     </main>
     @@include('html/_footer.htm',{})
   </div>
