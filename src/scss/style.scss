@@ -158,10 +158,13 @@ body {
   // .page__visiting
   // .page__explore
   // .page__tickets
+  // .page__contacts
+
   &__welcome,
   &__visiting,
   &__explore,
-  &__tickets {
+  &__tickets,
+  &__contacts {
     margin-bottom: rem(75);
   }
 

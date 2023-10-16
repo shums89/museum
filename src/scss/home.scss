@@ -174,7 +174,7 @@
   &__title {
     position: relative;
     margin-bottom: rem(75);
-    padding: rem(25);
+    padding-bottom: rem(25);
   }
   // .visiting__list
   &__list {
@@ -649,6 +649,7 @@
   &__title {
     margin-top: rem(75);
     margin-bottom: rem(75);
+    padding-bottom: rem(25);
   }
   // .tickets__content
   &__content {
@@ -742,7 +743,7 @@
     height: rem(50);
     color: #fff;
     background-color: #000;
-    border-radius: 2px;
+    border-radius: rem(2);
     &:hover {
       color: #000;
       background-color: #9d8665;
@@ -816,7 +817,7 @@
         width: rem(16);
         height: rem(3);
         transition: all 0.3s ease 0s;
-        margin: 0px 0px 0px -8px;
+        margin: 0 0 0 rem(-8);
         background-color: #000;
       }
       &:disabled {
@@ -870,5 +871,57 @@
 .tickets-amout-senior {
   // .tickets-amout-senior__quantity
   &__quantity {
+  }
+}
+
+//====================================================================
+
+.contacts {
+  // .contacts__container
+  &__container {
+  }
+  // .contacts__title
+  &__title {
+    margin-bottom: rem(75);
+    padding-bottom: rem(25);
+  }
+  // .contacts__content
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    gap: rem(50);
+    h3 {
+      max-width: rem(227);
+      margin-bottom: rem(50);
+      color: $mainColor;
+      font-family: 'Roboto';
+      font-size: rem(28);
+      font-weight: 500;
+      line-height: normal;
+    }
+    & p {
+      color: $mainColor;
+      font-family: 'Roboto';
+      font-size: rem(22);
+      font-weight: 300;
+      line-height: normal;
+      &:not(:last-of-type) {
+        margin-bottom: rem(25);
+      }
+
+      & a:hover {
+        transition: all 0.3s ease 0s;
+        cursor: pointer;
+        color: $fontGold;
+      }
+    }
+  }
+  // .contacts__info
+  &__info {
+  }
+  // .contacts__map
+  &__map {
+    width: rem(960);
+    height: rem(620);
   }
 }
