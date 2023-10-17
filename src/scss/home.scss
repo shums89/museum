@@ -93,7 +93,7 @@
     justify-content: center;
     align-items: center;
     align-content: center;
-    gap: rem(25);
+    gap: rem(15);
     & > * {
       position: relative;
       display: block;
@@ -174,7 +174,7 @@
   &__title {
     position: relative;
     margin-bottom: rem(75);
-    padding-bottom: rem(25);
+    padding-bottom: rem(28);
   }
   // .visiting__list
   &__list {
@@ -212,7 +212,7 @@
   &__title {
     width: max-content;
     margin-bottom: rem(75);
-    padding-bottom: rem(25);
+    padding-bottom: rem(28);
   }
   // .explore__text
   &__text {
@@ -238,6 +238,7 @@
     width: rem(720);
     height: rem(700);
     margin: 0;
+    margin-top: rem(15);
     padding: 0;
     overflow: hidden;
     // .compare__list
@@ -338,6 +339,7 @@
   // .video__text
   &__text {
     flex: 0 0 50%;
+    margin-top: rem(7);
     color: $mainColor;
     font-family: 'Roboto';
     font-size: rem(22);
@@ -361,7 +363,7 @@
 }
 .video-slider-view {
   position: relative;
-  height: rem(715);
+  height: rem(735);
   margin-bottom: rem(40);
   // .video-slider-view__swiper
   &__swiper {
@@ -388,10 +390,9 @@
         display: none;
       }
     }
-
     & video {
       width: 100%;
-      height: rem(715);
+      height: rem(650);
       object-fit: cover;
     }
   }
@@ -518,7 +519,7 @@
   &__swiper {
     display: flex;
     justify-content: space-between;
-    gap: rem(25);
+    gap: rem(14);
   }
   // .video-slider-preview__slide
   &__slide {
@@ -540,7 +541,7 @@
     justify-content: center;
     align-items: center;
     align-content: center;
-    gap: rem(16);
+    gap: rem(10);
     & > * {
       position: relative;
       display: block;
@@ -551,8 +552,8 @@
       &::after {
         content: '';
         position: absolute;
-        width: rem(16);
-        height: rem(16);
+        width: rem(12);
+        height: rem(12);
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
@@ -649,7 +650,7 @@
   &__title {
     margin-top: rem(75);
     margin-bottom: rem(75);
-    padding-bottom: rem(25);
+    padding-bottom: rem(28);
   }
   // .tickets__content
   &__content {
@@ -700,6 +701,11 @@
       font-size: rem(22);
       font-weight: 300;
       line-height: normal;
+      transition: all 0.3s ease 0s;
+      cursor: pointer;
+      &:hover {
+        color: $fontGold;
+      }
       &:not(:last-child) {
         margin-bottom: rem(25);
       }
@@ -883,7 +889,7 @@
   // .contacts__title
   &__title {
     margin-bottom: rem(75);
-    padding-bottom: rem(25);
+    padding-bottom: rem(28);
   }
   // .contacts__content
   &__content {

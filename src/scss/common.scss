@@ -80,7 +80,7 @@
   }
   // .visiting-card__title
   &__title {
-    padding-bottom: rem(10);
+    padding-bottom: rem(12);
     margin-bottom: rem(10);
     color: $mainColor;
     font-family: 'Forum';
@@ -97,6 +97,7 @@
   }
   // .visiting-card__text
   &__text {
+    margin-bottom: rem(10);
     color: $mainColor;
     font-family: 'Roboto';
     font-size: rem(22);
