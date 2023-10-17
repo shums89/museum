@@ -63,6 +63,10 @@
   }
   // .header__logo
   &__logo {
+    transition: all 0.3s ease 0s;
+    &:hover {
+      transform: scale(1.1);
+    }
   }
   // .header__menu
   &__menu {
@@ -92,6 +96,7 @@
   // .menu__link
   &__link {
     padding: rem(5);
+    transition: all 0.3s ease 0s;
     &:hover {
       color: $fontGold;
     }
