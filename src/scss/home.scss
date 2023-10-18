@@ -59,6 +59,10 @@
   }
   // .welcome-slider__slide
   &__slide {
+    &:not([class*='-active']) img {
+      width: 0;
+      height: 0;
+    }
   }
   // .welcome-slider__controll
   &__controll {
@@ -395,6 +399,10 @@
       height: rem(650);
       object-fit: cover;
     }
+    &:not([class*='-active']) video {
+      width: 0;
+      height: 0;
+    }
   }
   // .video-slider-view__slide-controls
   &__slide-controls {
@@ -435,7 +443,6 @@
     height: rem(8);
     appearance: none;
     background-color: #c4c4c4;
-    // overflow: hidden;
     cursor: pointer;
 
     &::-webkit-slider-thumb {
@@ -443,7 +450,6 @@
       height: rem(15);
       appearance: none;
       background-color: #fff;
-      // box-shadow: rem(-929) 0 0 rem(929) $darkRed;
       border-radius: 50%;
     }
 
@@ -458,7 +464,6 @@
   &__volume-toggle {
     width: rem(38);
     height: rem(31);
-
     & > * {
       display: none;
     }
@@ -629,13 +634,15 @@
   &__picture-inner-wrapper {
     column-count: 3;
     column-gap: rem(36);
-
-    & img {
+    & > * {
+      margin-bottom: rem(24);
       display: block;
       width: rem(456);
       height: auto;
-      margin-bottom: rem(24);
     }
+  }
+  // .gallery__picture
+  &__picture {
   }
 }
 
@@ -669,9 +676,7 @@
   &__parallax {
     width: 100%;
     height: rem(400);
-    background: url('@img/tickets/parallax.jpg') 0 0 no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
+    background: url('@img/tickets/parallax.jpg') center / cover no-repeat fixed;
   }
 }
 .tickets-form {

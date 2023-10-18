@@ -18,15 +18,15 @@
           <div class="welcome__slider welcome-slider">
             <div class="welcome-slider__slider">
               <div class="welcome-slider__swiper">
-                <div class="welcome-slider__slide"><img src="@img/welcome/1.jpg" alt="Slide 1"></div>
-                <div class="welcome-slider__slide"><img src="@img/welcome/2.jpg" alt="Slide 2"></div>
-                <div class="welcome-slider__slide"><img src="@img/welcome/3.jpg" alt="Slide 3"></div>
-                <div class="welcome-slider__slide"><img src="@img/welcome/4.jpg" alt="Slide 4"></div>
-                <div class="welcome-slider__slide"><img src="@img/welcome/5.jpg" alt="Slide 5"></div>
+                <div class="welcome-slider__slide"><img data-src="@img/welcome/1.jpg" alt="Slide 1"></div>
+                <div class="welcome-slider__slide"><img data-src="@img/welcome/2.jpg" alt="Slide 2"></div>
+                <div class="welcome-slider__slide"><img data-src="@img/welcome/3.jpg" alt="Slide 3"></div>
+                <div class="welcome-slider__slide"><img data-src="@img/welcome/4.jpg" alt="Slide 4"></div>
+                <div class="welcome-slider__slide"><img data-src="@img/welcome/5.jpg" alt="Slide 5"></div>
               </div>
               <div class="welcome-slider__controll welcome-slider-controll">
                 <div class="welcome-slider-controll__fraction fraction-controll">
-                  <span class="fraction-controll__current">01</span> | <span class="fraction-controll__all">00</span>
+                  <span class="fraction-controll__current">01</span> | <span class="fraction-controll__all">01</span>
                 </div>
                 <div class="welcome-slider-controll__pagination"></div>
                 <div class="welcome-slider-controll__buttons buttons-control">
@@ -97,8 +97,8 @@
           </div>
           <div class="explore__compare compare">
             <ul class="compare__list">
-              <li class="compare__item compare__item_before"><img src="@img/explore/before.jpg" alt="Slide 1"></li>
-              <li class="compare__item compare__item_after"><img src="@img/explore/after.jpg" alt="Slide 2"></li>
+              <li class="compare__item compare__item_before"><img data-src="@img/explore/before.jpg" alt="Slide 1"></li>
+              <li class="compare__item compare__item_after"><img data-src="@img/explore/after.jpg" alt="Slide 2"></li>
             </ul>
             <input class="compare__scale-toggle" type="range" min="0" max="100" value="50">
           </div>
@@ -113,26 +113,36 @@
           <div class="video__slider video-slider">
             <div class="video-slider__view video-slider-view">
               <ul class="video-slider-view__swiper">
-                <li class="video-slider-view__slide"><video src="@img/video/video0.mp4" poster="@img/video/poster0.jpg"></video></li>
-                <li class="video-slider-view__slide"><video src="@img/video/video1.mp4" poster="@img/video/poster1.jpg"></video></li>
-                <li class="video-slider-view__slide"><video src="@img/video/video2.mp4" poster="@img/video/poster2.jpg"></video></li>
-                <li class="video-slider-view__slide"><video src="@img/video/video3.mp4" poster="@img/video/poster3.jpg"></video></li>
-                <li class="video-slider-view__slide"><video src="@img/video/video4.mp4" poster="@img/video/poster4.jpg"></video></li>
+                <li class="video-slider-view__slide">
+                  <video preload="none" data-src="./files/video0.mp4" data-poster="@img/video/poster0.jpg"></video>
+                </li>
+                <li class="video-slider-view__slide">
+                  <video preload="none" data-src="./files/video1.mp4" data-poster="@img/video/poster1.jpg"></video>
+                </li>
+                <li class="video-slider-view__slide">
+                  <video preload="none" data-src="./files/video2.mp4" data-poster="@img/video/poster2.jpg"></video>
+                </li>
+                <li class="video-slider-view__slide">
+                  <video preload="none" data-src="./files/video3.mp4" data-poster="@img/video/poster3.jpg"></video>
+                </li>
+                <li class="video-slider-view__slide">
+                  <video preload="none" data-src="./files/video4.mp4" data-poster="@img/video/poster4.jpg"></video>
+                </li>
               </ul>
               <div class="video-slider-view__slide-controls slide-controls">
                 <button class="slide-controls__play-toggle" data-toggle="play" type="button">
-                  <img class="slide-controls__play" src="@img/icons/play.svg" alt="Play">
-                  <img class="slide-controls__pause" src="@img/icons/pause.svg" alt="Pause">
+                  <img class="slide-controls__play" data-src="@img/icons/play.svg" alt="Play">
+                  <img class="slide-controls__pause" data-src="@img/icons/pause.svg" alt="Pause">
                 </button>
                 <input class="slide-controls__progress-scale" type="range" min="0" max="100" value="0">
                 <button class="slide-controls__volume-toggle" data-toggle="volume" type="button">
-                  <img class="slide-controls__volume" src="@img/icons/volume.svg" alt="Volume">
-                  <img class="slide-controls__mute" src="@img/icons/mute.svg" alt="Mute">
+                  <img class="slide-controls__volume" data-src="@img/icons/volume.svg" alt="Volume">
+                  <img class="slide-controls__mute" data-src="@img/icons/mute.svg" alt="Mute">
                 </button>
                 <input class="slide-controls__volume-scale" type="range" min="0" max="100" value="100">
                 <button class="slide-controls__fullscreen-toggle" data-toggle="fullscreen" type="button">
-                  <img class="slide-controls__fullscreen" src="@img/icons/fullscreen.svg" alt="Fullscreen">
-                  <img class="slide-controls__fullscreen-exit" src="@img/icons/fullscreen_exit.svg" alt="Fullscreen exit">
+                  <img class="slide-controls__fullscreen" data-src="@img/icons/fullscreen.svg" alt="Fullscreen">
+                  <img class="slide-controls__fullscreen-exit" data-src="@img/icons/fullscreen_exit.svg" alt="Fullscreen exit">
                 </button>
               </div>
             </div>
@@ -185,7 +195,7 @@
         <div class="tickets__container">
           <h2 class="tickets__title section-title section-title_gold underline-title">Buy tickets</h2>
           <div class="tickets__content">
-            <img class="tickets__img" src="@img/tickets/tickets.jpeg" alt="Image tickets">
+            <img class="tickets__img" data-src="@img/tickets/tickets.jpg" alt="Image tickets">
             <form class="tickets__form tickets-form" action="" method="post">
               <fieldset class="tickets-form__type">
                 <legend>Ticket Type</legend>
@@ -240,7 +250,7 @@
               <p>mail: <a href="mailto:info@louvre.fr">info@louvre.fr</a></p>
             </div>
             <div class="contacts__map">
-              <img src="@img/contacts/map.jpg" alt="Map">
+              <img data-src="@img/contacts/map.jpg" alt="Map">
             </div>
           </div>
         </div>

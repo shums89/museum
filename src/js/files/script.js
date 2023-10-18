@@ -1,21 +1,22 @@
 window.addEventListener('load', () => {
-  const lazyImages = document.querySelectorAll('img[data-src]');
-  const lazyIframe = document.querySelectorAll('iframe[data-src]');
+  const lazyObjs = document.querySelectorAll('[data-src], [data-srcset], [data-poster]');
 
-  const updateLazyObject = (arr) => {
-    arr.forEach(e => {
-      if (e.dataset.src) {
-        e.src = e.dataset.src;
+  const updateLazyObject = arr => {
+    arr.forEach(el => {
+      if (el.dataset.src) {
+        el.src = el.dataset.src;
+      }
+      if (el.dataset.srcset) {
+        el.srcset = el.dataset.srcset;
+      }
+      if (el.dataset.poster) {
+        el.poster = el.dataset.poster;
       }
     });
   };
 
-  if (lazyImages) {
-    updateLazyObject(lazyImages);
-  }
-
-  if (lazyIframe) {
-    updateLazyObject(lazyIframe);
+  if (lazyObjs) {
+    updateLazyObject(lazyObjs);
   }
 });
 
@@ -151,7 +152,7 @@ const updateControls = (control, player = videoPlayer) => {
       break;
 
     case 'progress':
-      progressValue = player.currentTime / player.duration * 100;
+      progressValue = player.currentTime / player.duration * 100 || 0;
       videoProgressScale.value = progressValue;
       videoProgressScale.style.background = getGradient(progressValue);
       break;
@@ -162,7 +163,7 @@ const updateControls = (control, player = videoPlayer) => {
       videoVolumeScale.value = volumeValue;
       videoVolumeScale.style.background = getGradient(volumeValue);
       videoVolumeToggle.dataset.toggle = volumeValue == 0 ? 'mute' : 'volume';
-      progressValue = player.currentTime / player.duration * 100;
+      progressValue = player.currentTime / player.duration * 100 || 0;
       videoProgressScale.value = progressValue;
       videoProgressScale.style.background = getGradient(progressValue);
   }
@@ -272,6 +273,7 @@ changeVolume();
 //====================================================================
 
 const pictureInnerContainer = document.querySelector('.gallery__picture-inner-wrapper');
+const galleryPicture = pictureInnerContainer.children[0];
 
 const shuffle = (array) => {
   for (let i = array.length - 1; i > 0; i--) {
@@ -281,10 +283,17 @@ const shuffle = (array) => {
   return array;
 };
 
-shuffle(Array(15).fill().map((e, i) => i + 1))
-  .map((e, i) => {
-    const img = document.createElement('img');
-    img.src = `img/galery/galery${e}.jpg`;
-    img.alt = `galery image ${i}`;
-    pictureInnerContainer.append(img);
+pictureInnerContainer.innerHTML = '';
+shuffle(Array(15).fill().map((el, i) => i + 1))
+  .map((el) => {
+    // const img = document.createElement('img');
+    // img.src = `img/galery/galery${e}.jpg`;
+    // img.alt = `galery image ${i}`;
+
+    const elem = document.createElement('picture');
+    elem.innerHTML = `<source data-srcset="img/galery/galery${el}.webp" type="image/webp">
+                      <img class="gallery__picture" data-src="img/galery/galery${el}.jpg" alt="galery image">
+                      `;
+
+    pictureInnerContainer.append(elem);
   });
