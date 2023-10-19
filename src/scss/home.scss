@@ -146,8 +146,10 @@
   justify-content: space-between;
   align-items: center;
   gap: rem(10);
-  & > &__prev,
-  & > &__next {
+  // .buttons-control__prev
+  // .buttons-control__next
+  &__prev,
+  &__next {
     display: block;
     width: rem(40);
     height: rem(18);
@@ -158,6 +160,7 @@
       color: #d2b183;
     }
     & > svg {
+      display: block;
       width: 100%;
       height: 100%;
     }
@@ -589,26 +592,24 @@
   // .video-slider-controll__next
   &__prev,
   &__next {
-    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: rem(20);
     height: rem(22);
     padding: rem(5);
     color: #999999;
     cursor: pointer;
     & svg {
-      position: absolute;
       width: rem(10);
       height: rem(12);
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
     }
     &:hover {
       color: #710707;
     }
   }
   &__next svg {
-    transform: translate(-50%, -50%) rotate(-180deg);
+    transform: rotate(-180deg);
   }
 }
 
