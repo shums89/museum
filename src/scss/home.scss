@@ -775,6 +775,11 @@
   flex-direction: column;
   align-items: end;
   margin-bottom: rem(60);
+  color: $mainColor;
+  font-family: 'Roboto';
+  font-size: rem(22);
+  font-weight: 300;
+  line-height: normal;
   & legend {
     margin-bottom: rem(25);
     color: $mainColor;
@@ -784,24 +789,13 @@
     line-height: normal;
     text-align: right;
   }
-  & label {
-    color: $mainColor;
-    font-family: 'Roboto';
-    font-size: rem(22);
-    font-weight: 300;
-    line-height: normal;
-    &:not(:last-of-type) {
-      margin-bottom: rem(10);
-    }
-    &:last-of-type {
-      margin-bottom: rem(50);
-    }
-  }
   // .tickets-form-amout__basic
   &__basic {
+    margin-bottom: rem(10);
   }
   // .tickets-form-amout__senior
   &__senior {
+    margin-bottom: rem(50);
   }
   // .tickets-form-amout__total
   &__total {
@@ -870,6 +864,9 @@
   }
 }
 .tickets-amout-basic {
+  // .tickets-amout-basic__title
+  &__title {
+  }
   // .tickets-amout-basic__quantity
   &__quantity {
   }
@@ -889,6 +886,9 @@
   }
 }
 .tickets-amout-senior {
+  // .tickets-amout-senior__title
+  &__title {
+  }
   // .tickets-amout-senior__quantity
   &__quantity {
   }

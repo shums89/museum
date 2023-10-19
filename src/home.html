@@ -169,19 +169,19 @@
             <div class="video-slider__preview video-slider-preview">
               <ul class="video-slider-preview__swiper">
                 <li class="video-slider-preview__slide">
-                  <iframe data-src="https://www.youtube.com/embed/zp1BXPX8jcU?si=62NhDoVA3Es7u2R0" title="Slide 1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
+                  <iframe data-src="https://www.youtube.com/embed/zp1BXPX8jcU?si=62NhDoVA3Es7u2R0" title="Slide 1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
                 </li>
                 <li class="video-slider-preview__slide">
-                  <iframe data-src="https://www.youtube.com/embed/Vi5D6FKhRmo?si=GStRJQKYU_GWJviA" title="Slide 2" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
+                  <iframe data-src="https://www.youtube.com/embed/Vi5D6FKhRmo?si=GStRJQKYU_GWJviA" title="Slide 2" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
                 </li>
                 <li class="video-slider-preview__slide">
-                  <iframe data-src="https://www.youtube.com/embed/NOhDysLnTvY?si=6NE8ieiPR3Q57O2J" title="Slide 3" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
+                  <iframe data-src="https://www.youtube.com/embed/NOhDysLnTvY?si=6NE8ieiPR3Q57O2J" title="Slide 3" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
                 </li>
                 <li class="video-slider-preview__slide">
-                  <iframe data-src="https://www.youtube.com/embed/aWmJ5DgyWPI?si=170MrA6pfVHr9Xo4" title="Slide 4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
+                  <iframe data-src="https://www.youtube.com/embed/aWmJ5DgyWPI?si=170MrA6pfVHr9Xo4" title="Slide 4" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
                 </li>
                 <li class="video-slider-preview__slide">
-                  <iframe data-src="https://www.youtube.com/embed/2OR0OCr6uRE?si=kOskq1IPfs-SmqO-" title="Slide 5" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
+                  <iframe data-src="https://www.youtube.com/embed/2OR0OCr6uRE?si=kOskq1IPfs-SmqO-" title="Slide 5" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
                 </li>
               </ul>
             </div>
@@ -215,7 +215,7 @@
           <h2 class="tickets__title section-title section-title_gold underline-title">Buy tickets</h2>
           <div class="tickets__content">
             <img class="tickets__img" data-src="@img/tickets/tickets.jpg" alt="Image tickets">
-            <form class="tickets__form tickets-form" action="" method="post">
+            <form class="tickets__form tickets-form" action="#" method="post">
               <fieldset class="tickets-form__type">
                 <legend>Ticket Type</legend>
                 <input type="radio" name="tickets-type" value="permanent" id="permanent" checked>
@@ -228,8 +228,8 @@
               <div class="tickets-form__column-buy">
                 <fieldset class="tickets-form__amout tickets-form-amout">
                   <legend>Amount</legend>
-                  <label class="tickets-form-amout__basic tickets-amout-basic">
-                    Basic 18+
+                  <div class="tickets-form-amout__basic tickets-amout-basic">
+                    <h3 class="tickets-amout-basic__title">Basic 18+</h3>
                     <div class="tickets-amout-basic__quantity quantity">
                       <button class="quantity__button quantity__button_minus" type="button"></button>
                       <div class="quantity__input">
@@ -237,9 +237,9 @@
                       </div>
                       <button class="quantity__button quantity__button_plus" type="button"></button>
                     </div>
-                  </label>
-                  <label class="tickets-form-amout__senior tickets-amout-senior">
-                    Senior 65+
+                  </div>
+                  <div class="tickets-form-amout__senior tickets-amout-senior">
+                    <h3 class="tickets-amout-senior__title">Senior 65+</h3>
                     <div class="tickets-amout-senior__quantity quantity">
                       <button class="quantity__button quantity__button_minus" type="button" disabled></button>
                       <div class="quantity__input">
@@ -247,7 +247,7 @@
                       </div>
                       <button class="quantity__button quantity__button_plus" type="button"></button>
                     </div>
-                  </label>
+                  </div>
                   <p>Total €<span class="tickets-form-amout__total">220</span></p>
                 </fieldset>
                 <button class="tickets-form__btn button" type="submit">Buy Now</button>
