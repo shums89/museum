@@ -1,4 +1,5 @@
 import svgSprite from "gulp-svg-sprite";
+
 export const sprite = () => {
   return app.gulp.src(`${app.path.src.svgicons}`, {})
     .pipe(app.plugins.plumber(
@@ -10,15 +11,24 @@ export const sprite = () => {
     .pipe(svgSprite({
       mode: {
         symbol: {
-          sprite: '../img/icons/icons.svg',
-          inline: true // Prepare for inline embedding
+          sprite: '../img/icons/sprite.svg',
+          inline: true, // Prepare for inline embedding
           //example: true
-        }
+        },
+        // css: {
+        //   sprite: '../img/icons/sprite.css.svg',
+        //   render: {
+        //     // scss: true, // Activate Sass output (with default options)
+        //     scss: {
+        //       dest: '../scss/sprite.scss.scss',
+        //     }
+        //   }
+        // }
       },
       shape: {
         id: {
           separator: '',
-          generator: 'svg-'
+          // generator: 'svg-'
         },
         transform: [
           {
