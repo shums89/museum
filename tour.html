@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Tour</title>
+</head>
+
+<body>
+	<iframe src="" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+	</iframe>
+</body>
+<style>
+	html,
+	body {
+		height: 100%;
+		width: 100%;
+	}
+
+	body {
+		display: flex;
+		margin: 0;
+		padding: 0;
+	}
+
+	iframe {
+		flex-basis: 100%;
+		border: 0;
+	}
+</style>
+<script>
+	document.title = JSON.parse(localStorage.getItem('museum')).title;
+	document.querySelector('iframe').src = JSON.parse(localStorage.getItem('museum')).frameSrc;
+</script>
+
+</html>
