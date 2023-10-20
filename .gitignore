@@ -3,5 +3,5 @@ node_modules
 .gitignore
 dist/
 source/
-version.json
+config/version.json
 undefined
