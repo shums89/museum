@@ -226,14 +226,26 @@ export function formQuantity() {
   document.addEventListener("click", function (e) {
     let targetElement = e.target;
     if (targetElement.closest('.quantity__button')) {
-      let value = parseInt(targetElement.closest('.quantity').querySelector('input').value);
+      const input = targetElement.closest('.quantity').querySelector('input');
+      const btnMinus = targetElement.closest('.quantity').querySelector('.quantity__button_minus');
+      const btnPlus = targetElement.closest('.quantity').querySelector('.quantity__button_plus');
+      let value = parseInt(input.value);
+      let minValue = parseInt(input.min);
+      let maxValue = parseInt(input.max);
+
       if (targetElement.classList.contains('quantity__button_plus')) {
         value++;
       } else {
         --value;
-        if (value < 1) value = 1;
+        if (value < 1) value = minValue || 0;
       }
-      targetElement.closest('.quantity').querySelector('input').value = value;
+      input.value = value;
+      if (typeof minValue !== NaN) {
+        btnMinus.disabled = value === minValue;
+      }
+      if (typeof maxValue !== NaN) {
+        btnPlus.disabled = value === maxValue;
+      }
     }
   });
 }

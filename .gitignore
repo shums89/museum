@@ -1,1 +1,7 @@
+package-lock.json
 node_modules
+.gitignore
+dist/
+source/
+version.json
+undefined

@@ -28,7 +28,7 @@ flsFunctions.isWebp();
 // flsFunctions.addLoadedClass();
 
 /* Модуль для работы с меню (Бургер) */
-// flsFunctions.menuInit();
+flsFunctions.menuInit();
 
 /* Учет плавающей панели на мобильных устройствах при 100vh */
 // flsFunctions.fullVHfix();
@@ -76,7 +76,7 @@ import * as flsForms from "./files/forms/forms.js";
 // flsForms.formSubmit();
 
 /* Модуль формы "колличество" */
-// flsForms.formQuantity();
+flsForms.formQuantity();
 
 /* Модуль звездного рейтинга */
 // flsForms.formRating();
@@ -116,7 +116,7 @@ import * as flsForms from "./files/forms/forms.js";
 Документация: https://swiperjs.com/
 Сниппет(HTML): swiper
 */
-// import "./files/sliders.js";
+import "./files/sliders.js";
 
 //====================================================================
 // Модули работы с прокруткой страницы 

@@ -1,13 +1,279 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 @@include('html/_head.htm',{
-"title":"Главная"
+"title": "Главная"
 })
 
 <body>
   <div class="wrapper">
     @@include('html/_header.htm',{})
     <main class="page">
+      <section class="page__welcome welcome">
+        <div class="welcome__container">
+          <div class="welcome__content">
+            <h1 class="welcome__title section-title">Welcome<br>to the Louvre</h1>
+            <span class="welcome__subtitle">From the castle to the museum</span>
+            <a class="welcome__button button button_red" href="https://www.google.com/maps/@48.8618159,2.3366818,3a,75y,81.55h,73.4t/data=!3m7!1e1!3m5!1sAF1QipOVxZQuSy3Bx9T_HpH_7FtBHDTXvI6SF-A10ocT!2e10!3e12!7i5472!8i2736" target="_blank">Discover the Louvre</a>
+          </div>
+          <div class="welcome__slider welcome-slider">
+            <div class="welcome-slider__slider">
+              <div class="welcome-slider__swiper">
+                <div class="welcome-slider__slide"><img data-src="@img/welcome/1.jpg" alt="Slide 1"></div>
+                <div class="welcome-slider__slide"><img data-src="@img/welcome/2.jpg" alt="Slide 2"></div>
+                <div class="welcome-slider__slide"><img data-src="@img/welcome/3.jpg" alt="Slide 3"></div>
+                <div class="welcome-slider__slide"><img data-src="@img/welcome/4.jpg" alt="Slide 4"></div>
+                <div class="welcome-slider__slide"><img data-src="@img/welcome/5.jpg" alt="Slide 5"></div>
+              </div>
+              <div class="welcome-slider__controll welcome-slider-controll">
+                <div class="welcome-slider-controll__fraction fraction-controll">
+                  <span class="fraction-controll__current">01</span> | <span class="fraction-controll__all">01</span>
+                </div>
+                <div class="welcome-slider-controll__pagination"></div>
+                <div class="welcome-slider-controll__buttons buttons-control">
+                  <button class="buttons-control__prev" type="button">
+                    <svg>
+                      <use href="@img/icons/sprite.svg#arrow"></use>
+                    </svg>
+                  </button>
+                  <button class="buttons-control__next" type="button">
+                    <svg>
+                      <use href="@img/icons/sprite.svg#arrow"></use>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="page__visiting visiting" id="visiting">
+        <div class="visiting__container">
+          <h2 class="visiting__title section-title section-title_gold underline-title">Virtual tour</h2>
+          <ul class="visiting__list">
+            <li class="visiting__item">
+              @@include('html/_visiting.htm',{
+              "title": "Royal Palace",
+              "image": "royal-palace.jpg",
+              "frameSrc": "https://www.google.com/maps/embed?pb=!4v1696762171939!6m8!1m7!1sCAoSLEFGMVFpcE1aOVlnbkFyYndFSWJUREFOZVNRWUZ1OWdOcXBXXzJTdjhGQnZZ!2m2!1d48.8606881835717!2d2.335679134426641!3f328.36!4f-2.450000000000003!5f0.4000000000000002"
+              })
+            </li>
+            <li class="visiting__item">
+              @@include('html/_visiting.htm',{
+              "title": "Denon Wing",
+              "image": "denon-wing.jpg",
+              "frameSrc": "https://www.google.com/maps/embed?pb=!4v1696772548464!6m8!1m7!1sCAoSLEFGMVFpcE5Sal9Dd1A0Y29ETVlkQ0hqNnFIZUJlSnBJMlZ4VTVCVXNPWDRG!2m2!1d48.8563254!2d2.3352706!3f0!4f0!5f0.7820865974627469"
+              })
+            </li>
+            <li class="visiting__item">
+              @@include('html/_visiting.htm',{
+              "title": "Colonnade Perrault",
+              "image": "colonnade-perrault.jpg",
+              "frameSrc": "https://www.google.com/maps/embed?pb=!4v1696772607922!6m8!1m7!1sCAoSLEFGMVFpcE5NWkdRdUVBLXBBVXZJR19lUF8yZjNnV1RLWkVKNlhMVkotUGdi!2m2!1d48.8601723!2d2.3395439!3f322.04!4f-5.75!5f0.440292882915489"
+              })
+            </li>
+            <li class="visiting__item">
+              @@include('html/_visiting.htm',{
+              "title": "Greek hall",
+              "image": "greek-hall.jpg",
+              "frameSrc": "https://www.google.com/maps/embed?pb=!4v1696772641889!6m8!1m7!1sCAoSLEFGMVFpcFA3dUZablRJVFJlLTdBRVZBZ0hBZnFpQ0wtMDNndkJIY1lXZ0Yz!2m2!1d48.86018303140322!2d2.335615591987402!3f177.69!4f5.609999999999999!5f0.4000000000000002"
+              })
+            </li>
+            <li class="visiting__item">
+              @@include('html/_visiting.htm',{
+              "title": "Mona Lisa",
+              "image": "mona-lisa.jpg",
+              "frameSrc": "https://www.google.com/maps/embed?pb=!4v1696772665785!6m8!1m7!1sCAoSLEFGMVFpcE8xd2tVVWJ5enBQamotT1IwbVI1ZXRaSlQteGwtNDBYSzhyRFEz!2m2!1d48.85987877384653!2d2.335515730085149!3f7.53!4f4!5f0.5970117501821992"
+              })
+            </li>
+            <li class="visiting__item">
+              @@include('html/_visiting.htm',{
+              "title": "Night Palace",
+              "image": "night-palace.jpg",
+              "frameSrc": "https://www.google.com/maps/embed?pb=!4v1696772688842!6m8!1m7!1sCAoSLEFGMVFpcFBwR0Fvd1lhdFZ5azNNTUduWkFhUWtZbTJFVWstRGxjYTA2U1M1!2m2!1d48.8563254!2d2.3352706!3f21.26!4f-10.090000000000003!5f0.4000000000000002"
+              })
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section class="page__explore explore" id="explore">
+        <div class="explore__container">
+          <div class="explore__content">
+            <h2 class="explore__title section-title underline-title">Picture explore</h2>
+            <p class="explore__text">Las Meninas is a 1656 painting by Diego Velázquez, the leading artist of the Spanish Golden Age.</p>
+            <p class="explore__text">It was cleaned in 1984 to remove a <span>"yellow veil"</span> of dust that had gathered since the previous restoration in the 19th century.</p>
+            <p class="explore__text">The cleaning provoked furious protests, not because the picture had been damaged in any way, but because it looked different.</p>
+          </div>
+          <div class="explore__compare compare">
+            <ul class="compare__list">
+              <li class="compare__item compare__item_before"><img data-src="@img/explore/before.jpg" alt="Slide 1"></li>
+              <li class="compare__item compare__item_after"><img data-src="@img/explore/after.jpg" alt="Slide 2"></li>
+            </ul>
+            <input class="compare__scale-toggle" type="range" min="0" max="100" value="50">
+          </div>
+        </div>
+      </section>
+      <section class="page__video video" id="video">
+        <div class="video__container">
+          <div class="video__content">
+            <h2 class="video__title section-title section-title_gold">Video journey</h2>
+            <p class="video__text">Enter and visit one of the most famous museums in the world and enjoy masterpieces such as Mona Lisa or Hammurabi's Code</p>
+          </div>
+          <div class="video__slider video-slider">
+            <div class="video-slider__view video-slider-view">
+              <ul class="video-slider-view__swiper">
+                <li class="video-slider-view__slide">
+                  <video preload="none" data-src="./files/video0.mp4" data-poster="@img/video/poster0.jpg"></video>
+                </li>
+                <li class="video-slider-view__slide">
+                  <video preload="none" data-src="./files/video1.mp4" data-poster="@img/video/poster1.jpg"></video>
+                </li>
+                <li class="video-slider-view__slide">
+                  <video preload="none" data-src="./files/video2.mp4" data-poster="@img/video/poster2.jpg"></video>
+                </li>
+                <li class="video-slider-view__slide">
+                  <video preload="none" data-src="./files/video3.mp4" data-poster="@img/video/poster3.jpg"></video>
+                </li>
+                <li class="video-slider-view__slide">
+                  <video preload="none" data-src="./files/video4.mp4" data-poster="@img/video/poster4.jpg"></video>
+                </li>
+              </ul>
+              <div class="video-slider-view__slide-controls slide-controls">
+                <button class="slide-controls__play-toggle" data-toggle="play" type="button">
+                  <svg class="slide-controls__play">
+                    <use href="@img/icons/sprite.svg#play"></use>
+                  </svg>
+                  <svg class="slide-controls__pause">
+                    <use href="@img/icons/sprite.svg#pause"></use>
+                  </svg>
+                </button>
+                <input class="slide-controls__progress-scale" type="range" min="0" max="100" value="0">
+                <button class="slide-controls__volume-toggle" data-toggle="volume" type="button">
+                  <svg class="slide-controls__volume">
+                    <use href="@img/icons/sprite.svg#volume"></use>
+                  </svg>
+                  <svg class="slide-controls__mute">
+                    <use href="@img/icons/sprite.svg#mute"></use>
+                  </svg>
+                </button>
+                <input class="slide-controls__volume-scale" type="range" min="0" max="100" value="100">
+                <button class="slide-controls__fullscreen-toggle" data-toggle="fullscreen" type="button">
+                  <svg class="slide-controls__fullscreen">
+                    <use href="@img/icons/sprite.svg#fullscreen"></use>
+                  </svg>
+                  <svg class="slide-controls__fullscreen-exit">
+                    <use href="@img/icons/sprite.svg#fullscreen-exit"></use>
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <div class="video-slider__preview video-slider-preview">
+              <ul class="video-slider-preview__swiper">
+                <li class="video-slider-preview__slide">
+                  <iframe data-src="https://www.youtube.com/embed/zp1BXPX8jcU?si=62NhDoVA3Es7u2R0" title="Slide 1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
+                </li>
+                <li class="video-slider-preview__slide">
+                  <iframe data-src="https://www.youtube.com/embed/Vi5D6FKhRmo?si=GStRJQKYU_GWJviA" title="Slide 2" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
+                </li>
+                <li class="video-slider-preview__slide">
+                  <iframe data-src="https://www.youtube.com/embed/NOhDysLnTvY?si=6NE8ieiPR3Q57O2J" title="Slide 3" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
+                </li>
+                <li class="video-slider-preview__slide">
+                  <iframe data-src="https://www.youtube.com/embed/aWmJ5DgyWPI?si=170MrA6pfVHr9Xo4" title="Slide 4" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
+                </li>
+                <li class="video-slider-preview__slide">
+                  <iframe data-src="https://www.youtube.com/embed/2OR0OCr6uRE?si=kOskq1IPfs-SmqO-" title="Slide 5" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
+                </li>
+              </ul>
+            </div>
+            <div class="video-slider__controll video-slider-controll">
+              <button class="video-slider-controll__prev" type="button">
+                <svg>
+                  <use href="@img/icons/sprite.svg#double-arrows"></use>
+                </svg>
+              </button>
+              <div class="video-slider-controll__pagination"></div>
+              <button class="video-slider-controll__next" type="button">
+                <svg>
+                  <use href="@img/icons/sprite.svg#double-arrows"></use>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="page__gallery gallery" id="gallery">
+        <div class="gallery__container">
+          <h2 class="gallery__title section-title">Art Gallery</h2>
+          <div class="gallery__picture-wrapper">
+            <div class="gallery__picture-inner-wrapper">
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="page__tickets tickets" id="tickets">
+        <div class="tickets__container">
+          <h2 class="tickets__title section-title section-title_gold underline-title">Buy tickets</h2>
+          <div class="tickets__content">
+            <img class="tickets__img" data-src="@img/tickets/tickets.jpg" alt="Image tickets">
+            <form class="tickets__form tickets-form" action="#" method="post">
+              <fieldset class="tickets-form__type">
+                <legend>Ticket Type</legend>
+                <input type="radio" name="tickets-type" value="permanent" id="permanent" checked>
+                <label for="permanent">Permanent exhibition</label>
+                <input type="radio" name="tickets-type" value="temporary" id="temporary">
+                <label for="temporary">Temporary exhibition</label>
+                <input type="radio" name="tickets-type" value="combined" id="combined">
+                <label for="combined">Combined Admission</label>
+              </fieldset>
+              <div class="tickets-form__column-buy">
+                <fieldset class="tickets-form__amout tickets-form-amout">
+                  <legend>Amount</legend>
+                  <div class="tickets-form-amout__basic tickets-amout-basic">
+                    <h3 class="tickets-amout-basic__title">Basic 18+</h3>
+                    <div class="tickets-amout-basic__quantity quantity">
+                      <button class="quantity__button quantity__button_minus" type="button"></button>
+                      <div class="quantity__input">
+                        <input autocomplete="off" type="number" name="form[]" min="0" max="20" value="1">
+                      </div>
+                      <button class="quantity__button quantity__button_plus" type="button"></button>
+                    </div>
+                  </div>
+                  <div class="tickets-form-amout__senior tickets-amout-senior">
+                    <h3 class="tickets-amout-senior__title">Senior 65+</h3>
+                    <div class="tickets-amout-senior__quantity quantity">
+                      <button class="quantity__button quantity__button_minus" type="button" disabled></button>
+                      <div class="quantity__input">
+                        <input autocomplete="off" type="number" name="form[]" min="0" max="20" value="0">
+                      </div>
+                      <button class="quantity__button quantity__button_plus" type="button"></button>
+                    </div>
+                  </div>
+                  <p>Total €<span class="tickets-form-amout__total">220</span></p>
+                </fieldset>
+                <button class="tickets-form__btn button" type="submit">Buy Now</button>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="tickets__parallax">
+        </div>
+      </section>
+      <section class="page__contacts contacts" id="contacts">
+        <div class="contacts__container">
+          <h2 class="contacts__title section-title section-title_gold underline-title">Contacts</h2>
+          <div class="contacts__content">
+            <div class="contacts__info">
+              <h3>Palais Royal Musee du Louvre</h3>
+              <p>address: <a href="https://maps.app.goo.gl/kP2qZeK8erWG3fJ79">75001 Paris, France</a></p>
+              <p>phone: <a href="tel:330140205050">+33(0) 1 40 20 50 50</a></p>
+              <p>mail: <a href="mailto:info@louvre.fr">info@louvre.fr</a></p>
+            </div>
+            <div class="contacts__map">
+              <img data-src="@img/contacts/map.png" alt="Map">
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
     @@include('html/_footer.htm',{})
   </div>

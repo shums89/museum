@@ -1,1 +1,115 @@
 // Заголовки, общие БЄМ блоки и проче...
+
+.section-title {
+  color: $secondaryColor;
+  font-family: 'Forum';
+  font-size: rem(80);
+  font-weight: 400;
+  line-height: rem(90);
+  letter-spacing: rem(5);
+  text-transform: uppercase;
+  // .section-title_gold
+  &_gold {
+    color: $fontGold;
+  }
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  font-family: 'Roboto';
+  font-size: rem(22);
+  font-weight: 300;
+  line-height: normal;
+  letter-spacing: rem(2);
+  transition: all 0.3s ease 0s;
+  // .button_red
+  &_red {
+    color: #fff;
+    border-radius: rem(10);
+    background-color: $darkRed;
+  }
+  &:hover {
+    background-color: $fontGold;
+  }
+}
+
+//====================================================================
+
+.underline-title {
+  position: relative;
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: rem(3);
+    background-color: $darkRed;
+  }
+}
+
+//====================================================================
+
+.visiting-card {
+  &:hover {
+    & .visiting-card__title {
+      color: $fontGold;
+      &.underline-title:after {
+        width: 100%;
+      }
+    }
+    & .visiting-card__image-content img {
+      transform: scale(1.05);
+    }
+  }
+  // .visiting-card__link
+  &__link {
+    display: block;
+  }
+  // .visiting-card__image-content
+  &__image-content {
+    width: rem(440);
+    height: rem(285);
+    margin-bottom: rem(25);
+    & img {
+      transition: all 0.3s ease 0s;
+    }
+  }
+  // .visiting-card__title
+  &__title {
+    padding-bottom: rem(12);
+    margin-bottom: rem(10);
+    color: $mainColor;
+    font-family: 'Forum';
+    font-size: rem(32);
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: rem(5);
+    text-transform: uppercase;
+    &.underline-title:after {
+      width: rem(300);
+      height: rem(2);
+      transition: all 0.3s ease 0s;
+    }
+  }
+  // .visiting-card__text
+  &__text {
+    margin-bottom: rem(10);
+    color: $mainColor;
+    font-family: 'Roboto';
+    font-size: rem(22);
+    font-weight: 100;
+    line-height: normal;
+  }
+  // .visiting-card__subtext
+  &__subtext {
+    color: $mainColor;
+    font-family: 'Roboto';
+    font-size: rem(18);
+    font-weight: 100;
+    line-height: normal;
+  }
+}

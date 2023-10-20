@@ -30,7 +30,8 @@ import { otfToTtf, ttfToWoff, fonstStyle } from "./config/gulp-tasks/fonts.js";
 // Последовательная обработака шрифтов
 const fonts = gulp.series(reset, otfToTtf, ttfToWoff, fonstStyle);
 // Основные задачи будем выполнять параллельно после обработки шрифтов
-const devTasks = gulp.parallel(fonts, gitignore);
+// const devTasks = gulp.parallel(fonts, gitignore);
+const devTasks = gulp.series(gitignore);
 // Основные задачи будем выполнять параллельно после обработки шрифтов
 const buildTasks = gulp.series(fonts, jsDev, js, gulp.parallel(html, css, images, gitignore));
 
@@ -53,9 +54,3 @@ export { build };
 
 // Выполнение сценария по умолчанию
 gulp.task('default', development);
-
-
-
-
-
-
