@@ -2,7 +2,7 @@
 
 .icon-menu {
   display: none;
-  @media (max-width: $mobile) {
+  @media (max-width: $pc) {
     display: block;
     position: relative;
     width: rem(30);
@@ -18,7 +18,7 @@
       position: absolute;
       width: 100%;
       height: rem(2);
-      background-color: #000;
+      background-color: #fff;
     }
     &::before {
       top: 0;
@@ -54,16 +54,23 @@
   // .header__container
   background-color: $bgDark;
   &__container {
+    position: relative;
     display: flex;
     justify-content: space-between;
     align-items: center;
     align-content: center;
     gap: rem(30);
-    min-height: rem(150);
+    @include adaptiveValue('min-height', 150, 130, $maxWidthContainer, 1024, 2);
+    @include adaptiveValue('min-height', 130, 110, 1024, 768, 3);
+    @include adaptiveValue('min-height', 110, 90, 768, 420);
   }
   // .header__logo
   &__logo {
     transition: all 0.3s ease 0s;
+    & img {
+      width: auto;
+      @include adaptiveValue('height', 33, 20, 768, 420, 1);
+    }
     &:hover {
       transform: scale(1.1);
     }
@@ -81,20 +88,44 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    align-content: center;
     gap: rem(45);
     color: $secondaryColor;
     font-family: 'Roboto';
-    font-size: rem(22);
     font-weight: 100;
     line-height: normal;
     letter-spacing: rem(2);
+    @include adaptiveValue('font-size', 22, 20, $maxWidthContainer, 1024, 1);
+
+    @media (max-width: $pc) {
+      position: absolute;
+      display: flex;
+      flex-direction: column;
+      justify-content: start;
+      align-items: start;
+      gap: rem(25);
+      top: 100%;
+      left: -100%;
+      width: rem(297);
+      height: 100vh;
+      margin-bottom: auto;
+      padding-top: rem(35);
+      padding-left: rem(55);
+      background-color: $bgDark;
+      z-index: 20;
+      transition: all 0.3s ease 0s;
+      .menu-open & {
+        left: 0;
+      }
+    }
   }
   // .menu__item
   &__item {
+    position: relative;
   }
   // .menu__link
   &__link {
+    position: relative;
+    display: block;
     padding: rem(5);
     transition: all 0.3s ease 0s;
     &:hover {
@@ -102,6 +133,35 @@
     }
     &:active {
       color: $fontGoldDark;
+    }
+    .menu-open & {
+      width: rem(122);
+      &:before,
+      &:after {
+        content: '';
+        position: absolute;
+        right: 0;
+        width: rem(10);
+        height: rem(2);
+        border-radius: rem(0.5);
+        background-color: #fff;
+      }
+      &:before {
+        top: calc(50% - 3px);
+        transform: rotate(45deg);
+      }
+      &:after {
+        top: calc(50% + 3px);
+        transform: rotate(-45deg);
+      }
+      &:hover:before,
+      &:hover:after {
+        background-color: $fontGold;
+      }
+      &:active:before,
+      &:active:after {
+        background-color: $fontGoldDark;
+      }
     }
   }
   // .menu__icon

@@ -57,6 +57,29 @@ window.addEventListener("DOMContentLoaded", function () {
 
 //====================================================================
 
+import { menuClose } from './functions.js';
+
+export const scroll = () => {
+  const links = document.querySelectorAll('.menu__link');
+
+  links.forEach(link => {
+    link.addEventListener('click', () => {
+      menuClose();
+    });
+  });
+};
+
+const closeMenuOverlay = ({ target = e.target }) => {
+  if (document.documentElement.classList.contains('menu-open') && !target.closest('.menu__list')) {
+    menuClose();
+  }
+};
+
+document.addEventListener('click', closeMenuOverlay);
+scroll();
+
+//====================================================================
+
 const visitingCardLinks = document.querySelectorAll('.visiting-card__link');
 
 visitingCardLinks.forEach(link => {
